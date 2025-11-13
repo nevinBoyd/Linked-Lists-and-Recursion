@@ -22,16 +22,17 @@ class LinkedList:
         TODO:
         - Initialize 'head' to None to represent an empty list.
         """
-        pass
+        self.head = None
 
     def insert_at_front(self, data):
         """
-        TODO:
         - Create a new Node with 'data'.
         - Insert it at the front of the list (head).
         - Update 'head' to the new node.
         """
-        pass
+        new_node = Node(data)
+        new_node.next = self.head
+        self.head = new_node
 
     def insert_at_end(self, data):
         """
