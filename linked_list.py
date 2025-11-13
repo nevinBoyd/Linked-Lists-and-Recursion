@@ -78,7 +78,15 @@ class LinkedList:
           3. Otherwise, swap pointers and recurse.
         - Update 'head' to the returned new head.
         """
-        pass
+        def helper(prev, current):
+            if current is None:
+                return prev
+            
+            next_node = current.next
+            current.next = prev
+            return helper(current, next_node)
+        
+        self.head = helper(None, self.head)
 
     def recursive_search(self, target):
         """
