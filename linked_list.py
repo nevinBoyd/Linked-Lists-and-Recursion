@@ -97,7 +97,15 @@ class LinkedList:
           2. Returns True if current node's data == target.
           3. Otherwise, recurse on the next node.
         """
-        pass
+        def helper(node):
+            if node is None:
+                return False
+            if node.data == target:
+                return True
+            return helper(node.next)
+
+        return helper(self.head)
+
 
     def display(self):
         """
