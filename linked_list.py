@@ -61,7 +61,12 @@ class LinkedList:
           2. Otherwise, returns node.data + recursive call on node.next.
         - Return the total sum.
         """
-        pass
+        def helper(node):
+            if node is None:
+                return 0
+            return node.data + helper(node.next)
+        
+        return helper(self.head)
 
     def recursive_reverse(self):
         """
