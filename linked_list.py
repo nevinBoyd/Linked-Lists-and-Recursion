@@ -114,4 +114,14 @@ class LinkedList:
         - Traverse from 'head' and collect each node's data.
         - Format output as 'val -> val -> val -> None' or similar.
         """
-        pass
+        def display(self):
+            current = self.head
+            values = []
+
+            while current:
+                values.append(str(current.data))
+                current = current.next
+
+            values.append("None")
+            print(" -> ".join(values))
+
