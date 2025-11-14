@@ -106,11 +106,20 @@ Use the provided unittest suite:
 
 ```
 python3 -m unittest discover -s tests -p "test_*.py"
+```
+
+Expected output:
+
+```
 .....
 ----------------------------------------------------------------------
 Ran 5 tests in 0.000s
 OK
+```
 
+## Example Usage (main.py)
+
+```
 from linked_list import LinkedList
 
 if __name__ == "__main__":
@@ -137,8 +146,6 @@ if __name__ == "__main__":
 - `display()` is included as a debugging helper and not required by tests.
 
 ## Status
-### All required methods implemented
-### All tests passing
+### All required methods implemented  
+### All tests passing  
 ### Lab complete
-
-
