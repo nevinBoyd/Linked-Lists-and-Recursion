@@ -86,3 +86,59 @@ By focusing on **linked lists** (for dynamic insertion/deletion) and **recursion
 ## Submission
 Once the lab is complete, all tests are passing, and you've pushed the completed code to 
 your forked repo on GitHub, submit your GitHub repo through Canvas using CodeGrade.
+
+---
+
+# Developer Notes
+
+## Summary
+The Node and LinkedList classes have been fully implemented to support:
+- inserting nodes at the front and end
+- summing all values using recursion
+- searching for a target value using recursion
+- reversing the list in-place using recursion
+- displaying the list for debugging
+
+All provided unit tests pass successfully.
+
+## Running the Tests
+Use the provided unittest suite:
+
+```
+python3 -m unittest discover -s tests -p "test_*.py"
+.....
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+OK
+
+from linked_list import LinkedList
+
+if __name__ == "__main__":
+    ll = LinkedList()
+    ll.insert_at_end(1)
+    ll.insert_at_end(2)
+    ll.insert_at_end(3)
+
+    print("Original list:")
+    ll.display()
+
+    print("Sum:", ll.recursive_sum())
+    print("Search for 2:", ll.recursive_search(2))
+    print("Search for 999:", ll.recursive_search(999))
+
+    ll.recursive_reverse()
+    print("Reversed list:")
+    ll.display()
+```
+
+## Notes
+- Recursive methods use clean base-case → recursive-case flow.
+- The list is reversed in-place with pointer swapping (no extra data structures).
+- `display()` is included as a debugging helper and not required by tests.
+
+## Status
+### All required methods implemented
+### All tests passing
+### Lab complete
+
+
